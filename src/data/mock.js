@@ -219,11 +219,11 @@ export const musicTracks = [
   },
   {
     id: 2,
-    title: "Saxophone solo",
-    description: "St Thomas . Alto Saxophone solo composition with perfect blending",
-    duration: "0:18",
-    youtubeUrl: "https://www.youtube.com/watch?v=Dj3VJL74fAU",
-    releaseDate: "2023-07-11"
+    title: "Sun Down House remix",
+    description: "SOFI TUKKER | Jhone Summit | SUN COME UP | Clapton remix with saxophone live mix",
+    duration: "0:48",
+    youtubeUrl: "https://www.youtube.com/embed/0yj-K3Xwwg4",
+    releaseDate: "2026-01-12"
   },
   {
     id: 3,
@@ -233,7 +233,15 @@ export const musicTracks = [
     // youtubeUrl: "https://www.youtube.com/watch?v=EWA2voofYdc",
     youtubeUrl:"https://www.youtube.com/embed/EWA2voofYdc",
     releaseDate: "2022-05-03"
-  }
+  },
+  {
+    id: 4,
+    title: "Christmas Night with BREEZE Band",
+    description: "A festive Christmas greeting performance by The Breeze Band on Rupavahini",
+    duration: "0:18",
+    youtubeUrl: "https://www.youtube.com/embed/Auck-dqbX68",
+    releaseDate: "2024-12-20"
+  },
 ];
 
 export const bookingPackages = [
