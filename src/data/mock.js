@@ -283,6 +283,46 @@ export const bookingPackages = [
   }
 ];
 
+export const bookingPackages2 = [
+  {
+    id: 1,
+    name: "Breeze Band - Classic Jazz Package",
+    price: "Starting from LKR 150,000/-",
+    features: [ 
+      "4-5 piece jazz ensemble performance",
+      "3-4 hour live jazz standards set",
+      "Professional sound equipment included",
+      "Jazz classics and modern arrangements",
+      "Perfect for opening ceremony , Cocktail functions & luxury  birthdays"
+    ]
+  },
+  {
+    id: 2,
+    name: "Breeze Band - Premium Jazz Experience",
+    price: "Starting from LKR 180,000/-",
+    features: [
+      "Extended 4-6 hour performance",
+      "Complete sounds RCF, lights stage ,transport",
+      "Wide repertoire of jazz standards and popular songs",
+      "MC services and event coordination"
+    ],
+    specialOffer: "Special wedding package discount available"
+  },
+  {
+    id: 3,
+    name: "Breeze Full Band - Elite Entertainment Package",
+    price: "LKR 350,000/-",
+    features: [
+      "Full jazz Band experience",
+      "All-evening entertainment coverage",
+      "Premium sound (RCF, LA audio) and lighting setup",
+      "Custom song arrangements available",
+      "Professional photography and social media coverage",
+      "Dedicated event coordinator"
+    ],
+  }
+];
+
 export const testimonials = [
   {
     id: 1,
