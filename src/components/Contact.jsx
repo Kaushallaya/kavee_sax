@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Check } from 'lucide-react';
-import { artistInfo, bookingPackages } from '../data/mock';
+import { artistInfo, bookingPackages, bookingPackages2 } from '../data/mock';
 import { useToast } from '../hooks/use-toast';
 import emailjs from '@emailjs/browser';
 
@@ -16,6 +16,7 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [activeTab, setActiveTab] = useState('kavee'); // Tab state for packages
 
   // EmailJS Configuration
   const EMAILJS_SERVICE_ID = process.env.VITE_EMAILJS_SERVICE_ID || 'service_rqvyl3s' ;
@@ -385,8 +386,36 @@ const Contact = () => {
               >
                 Package Pricing
               </h3>
+              
+              {/* Tabs */}
+              <div className="flex space-x-2 mb-6">
+                <button
+                  onClick={() => setActiveTab('kavee')}
+                  className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
+                    activeTab === 'kavee'
+                      ? 'bg-[#d4af37] text-black'
+                      : 'bg-black/30 text-gray-400 hover:bg-black/50'
+                  }`}
+                  style={{ fontFamily: 'Poppins, sans-serif' }}
+                >
+                  Kavee Sax
+                </button>
+                <button
+                  onClick={() => setActiveTab('breeze')}
+                  className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
+                    activeTab === 'breeze'
+                      ? 'bg-[#d4af37] text-black'
+                      : 'bg-black/30 text-gray-400 hover:bg-black/50'
+                  }`}
+                  style={{ fontFamily: 'Poppins, sans-serif' }}
+                >
+                  Breeze Band
+                </button>
+              </div>
+
+              {/* Package Content */}
               <div className="space-y-6">
-                {bookingPackages.map((pkg) => (
+                {(activeTab === 'kavee' ? bookingPackages : bookingPackages2).map((pkg) => (
                   <div key={pkg.id} className="border-b border-[#d4af37]/20 pb-6 last:border-0 last:pb-0">
                     <h4
                       className="text-lg font-bold mb-2"
@@ -401,7 +430,7 @@ const Contact = () => {
                       {pkg.price}
                     </p>
                     <ul className="space-y-2">
-                      {pkg.features. map((feature, index) => (
+                      {pkg.features.map((feature, index) => (
                         <li
                           key={index}
                           className="flex items-start text-sm text-gray-400"
